@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1> My Image Gallery </h1>
+    <div class="buttons">
+        <button onclick="filterImages('all')">All</button>
+        <button onclick="filterImages('nature')">Nature</button>
+        <button onclick="filterImages('forest')">Forest</button>
+        <button onclick="filterImages('sunset')">Sunset</button>
+    </div>
+
+    <div class="gallery">
+           <img src="images/forest1.jpg" class="nature"onclick="openLightbox(this)">
+           <img src="images/forest2.jpg" class="nature" onclick="openLightbox(this)">
+           <img src="images/forest3.jpg" class="forest" onclick="openLightbox(this)">
+           <img src="images/forest4.jpg" class="nature" onclick="openLightbox(this)">
+           <img src="images/forest5.jpg" class="nature" onclick="openLightbox(this)">
+           <img src="images/forest6.jpg" class="nature" onclick="openLightbox(this)">
+           <img src="images/forest7.jpg" class="forest" onclick="openLightbox(this)">
+           <img src="images/forest8.jpg" class="sunset" onclick="openLightbox(this)">
+           <img src="images/forest9.jpg" class="nature" onclick="openLightbox(this)">
+           <img src="images/forest10.jpg" class="sunset" onclick="openLightbox(this)">
+           <img src="images/forest11.jpg" class="sunset" onclick="openLightbox(this)">
+           <img src="images/forest12.jpg" class="sunset" onclick="openLightbox(this)">
+           <img src="images/forest13.jpg" class="forest" onclick="openLightbox(this)">
+           <img src="images/forest14.jpg" class="forest" onclick="openLightbox(this)">
+    </div>
+
+    <div id="lightbox">
+       <span onclick="closeLightbox()">×</span>
+       <button onclick="prevImg()">❮</button>
+       <img id="lightboxImg">
+       <button onclick="nextImg()">❯</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

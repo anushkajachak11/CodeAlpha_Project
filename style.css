@@ -1,0 +1,152 @@
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+h1 {
+   margin-top: 25px;
+   text-align: center;
+   margin: 20px 0;
+   letter-spacing: 1px;
+}
+
+.buttons {
+  position: sticky;
+  top: 0;
+  background: #f2f2f2;
+  padding: 10px;
+  z-index: 10;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.buttons button {
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 8px;
+  margin: 6px;
+}
+.buttons button:hover {
+  background:#555;
+  transform: scale(1.05);
+  transition:.3s;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform .4s ease, box-shadow .4s ease;
+  opacity:1;
+  transform:scale(1);
+  transition:0.4s ease;
+}
+
+.gallery-wrapper{
+    max-width:1100px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+.image.hide{
+ opacity:0;
+ transform:scale(0.8);
+ pointer-events:none;
+ position:absolute;
+}
+
+.lightbox span{
+ position:absolute;
+ color:white;
+ font-size:40px;
+ cursor:pointer;
+ user-select:none;
+}
+
+.prev{ left:40px; }
+.next{ right:40px; }
+.close{ top:30px; right:40px; font-size:35px; }
+
+.filter-btn{
+    padding:10px 20px;
+    border:none;
+    background:#eef2ff;
+    color:#333;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.filter-btn:hover{
+    background:#4f46e5;
+    color:white;
+}
+
+.filter-btn.active{
+    background:#4f46e5;
+    color:white;
+}
+
+#lightbox img {
+  max-width:80%;
+  max-height:80%;
+}
+
+#lightbox span {
+  position:absolute;
+  top:20px;
+  right:30px;
+  color:white;
+  font-size:35px;
+  cursor:pointer;
+}
+
+#lightbox button {
+  background:none;
+  color:white;
+  font-size:40px;
+  border:none;
+  cursor:pointer;
+  margin:20px;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+  box-shadow:0 12px 25px rgba(0,0,0,0.2);
+}
+.image{
+    animation:fade 0.4s ease;
+}
+
+@keyframes fade{
+    from{opacity:0; transform:scale(0.95);}
+    to{opacity:1; transform:scale(1);}
+}
+
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
